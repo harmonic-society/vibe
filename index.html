@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌈 Claude Code マンツーマン講座 | 1ヶ月でLPを自由自在に作れるようになる</title>
+    <title>Claude Code マンツーマン講座 | 1ヶ月でLPを自由自在に作れるようになる</title>
     <style>
         * {
             margin: 0;
@@ -13,60 +13,69 @@
 
         body {
             font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
-            line-height: 1.8;
-            color: #333;
+            line-height: 1.75;
+            color: #1a1a1a;
             background-color: #fff;
+            font-size: 16px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 120px 40px 100px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            line-height: 1.4;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            font-weight: 700;
+            letter-spacing: 0.02em;
         }
 
         .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
+            font-size: 1.25rem;
+            margin-bottom: 50px;
             opacity: 0.95;
+            font-weight: 400;
+            letter-spacing: 0.03em;
         }
 
         .hero-highlight {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 40px 50px;
+            border-radius: 8px;
             backdrop-filter: blur(10px);
-            margin-top: 40px;
+            margin-top: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         /* Section Styles */
         section {
-            padding: 80px 20px;
+            padding: 100px 40px;
         }
 
         section:nth-child(even) {
-            background-color: #f9fafb;
+            background-color: #f8f9fa;
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.2rem;
+            margin-bottom: 60px;
             text-align: center;
             position: relative;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.02em;
         }
 
         h2::after {
@@ -75,25 +84,26 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
+            width: 80px;
+            height: 3px;
+            background: #1e40af;
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 20px;
-            color: #667eea;
+            color: #1e40af;
+            font-weight: 600;
         }
 
         /* Problem Section */
         .problem-list {
             background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
+            padding: 50px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            margin-bottom: 40px;
+            border: 1px solid #e5e7eb;
         }
 
         .problem-list ul {
@@ -101,91 +111,99 @@
         }
 
         .problem-list li {
-            padding: 15px 0;
-            padding-left: 30px;
+            padding: 18px 0;
+            padding-left: 40px;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            color: #374151;
         }
 
         .problem-list li::before {
-            content: '❌';
+            content: '•';
             position: absolute;
             left: 0;
+            font-size: 1.8rem;
+            color: #1e40af;
+            font-weight: bold;
         }
 
         .solution-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-            margin-top: 30px;
+            background: #f0f4ff;
+            padding: 40px 50px;
+            border-radius: 8px;
+            border-left: 4px solid #1e40af;
+            margin-top: 40px;
         }
 
         /* Benefits Grid */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
         }
 
         .benefit-card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
         }
 
         .benefit-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
 
         /* Evidence Section */
         .evidence-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 35px;
+            margin-top: 50px;
         }
 
         .evidence-card {
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #667eea;
+            padding: 40px 35px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            border-top: 3px solid #1e40af;
+            border-left: 1px solid #e5e7eb;
+            border-right: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .evidence-card h4 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.15rem;
         }
 
         /* Curriculum Table */
         .curriculum-table {
             background: white;
-            border-radius: 15px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            margin-top: 40px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            margin-top: 50px;
+            border: 1px solid #e5e7eb;
         }
 
         .curriculum-row {
             display: grid;
-            grid-template-columns: 100px 250px 1fr;
+            grid-template-columns: 120px 280px 1fr;
             border-bottom: 1px solid #e5e7eb;
-            transition: background 0.3s ease;
+            transition: background 0.2s ease;
         }
 
         .curriculum-row:hover {
-            background: #f9fafb;
+            background: #f8f9fa;
         }
 
         .curriculum-row:last-child {
@@ -193,8 +211,9 @@
         }
 
         .curriculum-cell {
-            padding: 25px;
+            padding: 28px 30px;
             border-right: 1px solid #e5e7eb;
+            font-size: 1rem;
         }
 
         .curriculum-cell:last-child {
@@ -202,47 +221,51 @@
         }
 
         .curriculum-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1e40af;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         .week-cell {
-            font-weight: bold;
-            color: #667eea;
+            font-weight: 700;
+            color: #1e40af;
             text-align: center;
         }
 
         /* Offer Section */
         .offer-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
-            padding: 60px;
-            border-radius: 20px;
+            padding: 70px 60px;
+            border-radius: 8px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
         }
 
         .price {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 20px 0;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin: 30px 0;
+            letter-spacing: -0.02em;
         }
 
         .price-note {
             font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
+            opacity: 0.92;
+            margin-bottom: 40px;
+            font-weight: 400;
         }
 
         .includes-list {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 15px;
+            padding: 40px 45px;
+            border-radius: 8px;
             text-align: left;
-            margin: 30px auto;
-            max-width: 600px;
+            margin: 40px auto;
+            max-width: 650px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .includes-list ul {
@@ -250,9 +273,10 @@
         }
 
         .includes-list li {
-            padding: 10px 0;
-            padding-left: 30px;
+            padding: 12px 0;
+            padding-left: 35px;
             position: relative;
+            font-size: 1.05rem;
         }
 
         .includes-list li::before {
@@ -260,37 +284,39 @@
             position: absolute;
             left: 0;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         /* CTA Buttons */
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 20px 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 6px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.02em;
         }
 
         .cta-primary {
             background: white;
-            color: #667eea;
+            color: #1e40af;
         }
 
         .cta-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            background: #f8f9fa;
         }
 
         .cta-secondary {
@@ -301,18 +327,19 @@
 
         .cta-secondary:hover {
             background: white;
-            color: #667eea;
-            transform: translateY(-3px);
+            color: #1e40af;
+            transform: translateY(-2px);
         }
 
         /* Target Audience */
         .target-list {
             background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            max-width: 700px;
-            margin: 40px auto;
+            padding: 50px 55px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            max-width: 750px;
+            margin: 50px auto;
+            border: 1px solid #e5e7eb;
         }
 
         .target-list ul {
@@ -320,11 +347,12 @@
         }
 
         .target-list li {
-            padding: 15px 0;
+            padding: 18px 0;
             padding-left: 40px;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             border-bottom: 1px solid #e5e7eb;
+            color: #374151;
         }
 
         .target-list li:last-child {
@@ -332,17 +360,19 @@
         }
 
         .target-list li::before {
-            content: '🎯';
+            content: '•';
             position: absolute;
             left: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            color: #1e40af;
+            font-weight: bold;
         }
 
         /* Final Message */
         .final-message {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 100px 40px;
             text-align: center;
         }
 
@@ -355,30 +385,23 @@
         }
 
         .final-message p {
-            font-size: 1.3rem;
-            margin: 20px 0;
-            line-height: 2;
+            font-size: 1.2rem;
+            margin: 25px 0;
+            line-height: 1.9;
+            font-weight: 400;
         }
 
         /* Limited Offer Badge */
         .limited-badge {
             display: inline-block;
-            background: #ef4444;
+            background: #dc2626;
             color: white;
-            padding: 10px 30px;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 20px 0;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
+            padding: 12px 35px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 25px 0;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
         }
 
         /* Responsive Design */
@@ -418,29 +441,34 @@
         /* Affinity Section */
         .affinity-box {
             background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 40px auto;
-            border-left: 5px solid #764ba2;
+            padding: 55px 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
+            max-width: 850px;
+            margin: 50px auto;
+            border-left: 4px solid #1e40af;
+            border-top: 1px solid #e5e7eb;
+            border-right: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .affinity-box p {
-            font-size: 1.15rem;
-            line-height: 2;
-            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 22px;
+            color: #374151;
         }
 
         .affinity-highlight {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 20px 30px;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            background: #f0f4ff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            margin-top: 35px;
+            font-size: 1.15rem;
+            font-weight: 600;
             text-align: center;
-            color: #667eea;
+            color: #1e40af;
+            border: 1px solid #dbeafe;
         }
     </style>
 </head>
@@ -448,11 +476,11 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>🌈 Claude Code マンツーマン講座</h1>
-            <p class="subtitle">プログラミング未経験でも、1ヶ月でLPを"自由自在"に作れるようになる。</p>
+            <h1>Claude Code マンツーマン講座</h1>
+            <p class="subtitle">プログラミング未経験でも、1ヶ月でLPを自由自在に作れるようになる</p>
             <div class="hero-highlight">
-                <p style="font-size: 1.3rem; font-weight: bold;">AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
-                <p style="font-size: 1.1rem; margin-top: 15px;">でも、AIの指示の出し方を知らないと挫折してしまう…</p>
+                <p style="font-size: 1.2rem; font-weight: 600;">AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
+                <p style="font-size: 1.05rem; margin-top: 20px;">しかし、AIの指示の出し方を知らないと挫折してしまうのが現実です。</p>
             </div>
         </div>
     </section>
@@ -460,7 +488,7 @@
     <!-- Problem Section -->
     <section id="problem">
         <div class="container">
-            <h2>🧩 こんな悩みはありませんか？</h2>
+            <h2>こんな課題を抱えていませんか？</h2>
             <div class="problem-list">
                 <ul>
                     <li>LPを作りたい。でも、コードが分からない。</li>
@@ -478,7 +506,7 @@
     <!-- Affinity Section -->
     <section id="affinity">
         <div class="container">
-            <h2>💬 私も同じ悩みを抱えていました</h2>
+            <h2>私も同じ悩みを抱えていました</h2>
             <div class="affinity-box">
                 <p>私もかつて、LPを作るたびに「ここだけ変えたいのにコードがわからない…」と悩んでいました。</p>
                 <p>でも、<strong>Claude Codeを使い始めてからは、</strong><br>
@@ -495,28 +523,28 @@
     <!-- Solution Section -->
     <section id="solution">
         <div class="container">
-            <h2>💡 解決策は「AIと作る」実践型講座</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <h3 style="text-align: center; color: #667eea; font-size: 1.5rem; margin-bottom: 30px;">
+            <h2>解決策：AIと作る実践型講座</h2>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h3 style="text-align: center; color: #1e40af; font-size: 1.3rem; margin-bottom: 40px; font-weight: 600; line-height: 1.8;">
                     Claude Codeを使ったマンツーマン×実践型講座で、<br>
-                    未経験からでも"自分でLPを作り上げる力"を1ヶ月で習得。
+                    未経験からでも自分でLPを作り上げる力を1ヶ月で習得できます。
                 </h3>
                 <div class="benefits-grid">
                     <div class="benefit-card">
-                        <div class="benefit-icon">📐</div>
-                        <p><strong>LP構成をAIと一緒に設計</strong><br>ワイヤーフレームから始める</p>
+                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">LP構成をAIと一緒に設計</h4>
+                        <p style="color: #6b7280;">ワイヤーフレームから始めて、構成を最適化します</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">⚡</div>
-                        <p><strong>HTML/CSSを自動生成</strong><br>Claude Codeが書いてくれる</p>
+                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">HTML/CSSを自動生成</h4>
+                        <p style="color: #6b7280;">Claude Codeが自動でコードを作成します</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">🔄</div>
-                        <p><strong>会話ベースで修正・改善</strong><br>コードを書かずに調整できる</p>
+                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">会話ベースで修正・改善</h4>
+                        <p style="color: #6b7280;">コードを書かずに自然な会話で調整可能</p>
                     </div>
                     <div class="benefit-card">
-                        <div class="benefit-icon">🎨</div>
-                        <p><strong>画像・コピーもAIで</strong><br>1枚LPを完全に完成させる</p>
+                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">画像・コピーもAIで作成</h4>
+                        <p style="color: #6b7280;">1枚のLPを完全に完成させます</p>
                     </div>
                 </div>
             </div>
@@ -526,31 +554,27 @@
     <!-- Benefits Section -->
     <section id="benefits">
         <div class="container">
-            <h2>🚀 たった1ヶ月で、あなたはこうなります</h2>
+            <h2>1ヶ月後に得られる成果</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <h4>LPを自由自在に作れる</h4>
-                    <p>AIに指示して思い通りのページを制作</p>
+                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">LPを自由自在に作れる</h4>
+                    <p style="color: #6b7280;">AIに指示して思い通りのページを制作できます</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🛠️</div>
-                    <h4>自分で修正できる</h4>
-                    <p>コードが分からなくても調整可能</p>
+                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">自分で修正できる</h4>
+                    <p style="color: #6b7280;">コードが分からなくても調整が可能になります</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">💼</div>
-                    <h4>すぐに実務で使える</h4>
-                    <p>クライアントLP・自社LPをすぐ制作</p>
+                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">すぐに実務で使える</h4>
+                    <p style="color: #6b7280;">クライアントLP・自社LPをすぐに制作できます</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">⭐</div>
-                    <h4>差別化できる</h4>
-                    <p>"AIでWebを作れる人"として活躍</p>
+                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">市場価値が向上する</h4>
+                    <p style="color: #6b7280;">AIでWebを作れる人材として差別化できます</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 50px; font-size: 1.3rem; font-weight: bold; color: #667eea;">
-                💬 もう外注に頼らなくても、自分で売れるページを作れる。
+            <div style="text-align: center; margin-top: 50px; font-size: 1.15rem; font-weight: 600; color: #1e40af;">
+                外注に頼らず、自分の手で成果につながるページを制作できるようになります。
             </div>
         </div>
     </section>
@@ -558,10 +582,10 @@
     <!-- Evidence Section -->
     <section id="evidence">
         <div class="container">
-            <h2>🧾 実績と信頼性</h2>
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h3 style="color: #667eea;">現役でAI×Web制作支援を行うクリエイティブディレクターが指導</h3>
-                <p style="font-size: 1.1rem; margin-top: 10px;">企業サイト・LP構築・地域プロジェクトなど実務でClaude Codeを活用中</p>
+            <h2>実績と信頼性</h2>
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h3 style="color: #1e40af; font-size: 1.3rem;">現役でAI×Web制作支援を行うクリエイティブディレクターが指導</h3>
+                <p style="font-size: 1.05rem; margin-top: 15px; color: #374151;">企業サイト・LP構築・地域プロジェクトなど実務でClaude Codeを活用中</p>
             </div>
             <div class="evidence-cards">
                 <div class="evidence-card">
@@ -583,7 +607,7 @@
     <!-- Contents Section -->
     <section id="contents">
         <div class="container">
-            <h2>📚 講座内容</h2>
+            <h2>講座カリキュラム</h2>
             <div class="curriculum-table">
                 <div class="curriculum-row curriculum-header">
                     <div class="curriculum-cell">週</div>
@@ -628,7 +652,7 @@
     <!-- Offer Section -->
     <section id="offer">
         <div class="container">
-            <h2>🎁 受講料とお申し込み</h2>
+            <h2>受講料とお申し込み</h2>
             <div class="offer-box">
                 <div class="limited-badge">毎月5名限定</div>
                 <div class="price">98,000円<span style="font-size: 1.5rem;">（税込）</span></div>
@@ -646,8 +670,8 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="#" class="cta-button cta-primary">🎓 無料カウンセリングを予約する</a>
-                    <a href="#" class="cta-button cta-secondary">📩 LINEで講座資料を受け取る</a>
+                    <a href="#" class="cta-button cta-primary">無料カウンセリングを予約する</a>
+                    <a href="#" class="cta-button cta-secondary">LINEで講座資料を受け取る</a>
                 </div>
             </div>
         </div>
@@ -656,7 +680,7 @@
     <!-- Target Audience Section -->
     <section id="target">
         <div class="container">
-            <h2>🎯 この講座は、こんな方のためのものです</h2>
+            <h2>受講対象者</h2>
             <div class="target-list">
                 <ul>
                     <li>LPを外注せず、自分で作れるようになりたい</li>
@@ -671,26 +695,25 @@
     <!-- Final Message Section -->
     <section class="final-message">
         <div class="container">
-            <h2>✨ 最後に</h2>
-            <p style="max-width: 800px; margin: 30px auto;">
+            <h2>最後に</h2>
+            <p style="max-width: 850px; margin: 30px auto;">
                 Claude Codeは、あなたの代わりにコードを書き、<br>
-                あなたの意図を汲み取って形にしてくれる<br>
-                <strong style="font-size: 1.5rem;">「もう一人の開発者」です。</strong>
+                あなたの意図を汲み取って形にしてくれる「もう一人の開発者」です。
             </p>
-            <div style="background: rgba(255, 255, 255, 0.2); padding: 40px; border-radius: 20px; backdrop-filter: blur(10px); margin: 40px auto; max-width: 700px;">
-                <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 20px;">1ヶ月後、あなたはもう<br>「プログラミング未経験者」ではありません。</p>
-                <p style="font-size: 1.5rem; font-weight: bold;">"AIとLPを作れる人" になっています。</p>
+            <div style="background: rgba(255, 255, 255, 0.15); padding: 50px; border-radius: 8px; backdrop-filter: blur(10px); margin: 50px auto; max-width: 750px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 25px;">1ヶ月後、あなたは「プログラミング未経験者」ではなく、</p>
+                <p style="font-size: 1.35rem; font-weight: 700;">AIとLPを作れる人材になっています。</p>
             </div>
             <div class="cta-buttons" style="margin-top: 50px;">
-                <a href="#" class="cta-button cta-primary">🏁 今すぐ無料カウンセリングを予約する</a>
+                <a href="#" class="cta-button cta-primary">今すぐ無料カウンセリングを予約する</a>
             </div>
         </div>
     </section>
 
-    <footer style="background: #1f2937; color: white; padding: 40px 20px; text-align: center;">
+    <footer style="background: #1f2937; color: white; padding: 50px 40px; text-align: center;">
         <div class="container">
-            <p>&copy; 2025 Claude Code マンツーマン講座. All rights reserved.</p>
-            <p style="margin-top: 10px; opacity: 0.8;">AIと一緒に、あなたの「作りたい」を実現しよう。</p>
+            <p style="font-size: 0.95rem;">&copy; 2025 Claude Code マンツーマン講座. All rights reserved.</p>
+            <p style="margin-top: 15px; opacity: 0.75; font-size: 0.9rem;">AIと一緒に、あなたの理想を実現する</p>
         </div>
     </footer>
 </body>
