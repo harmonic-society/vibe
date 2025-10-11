@@ -3,474 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code マンツーマン講座 | 1ヶ月でLPを自由自在に作れるようになる</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
-            line-height: 1.75;
-            color: #1a1a1a;
-            background-color: #fff;
-            font-size: 16px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 120px 40px 100px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
-            line-height: 1.3;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-        }
-
-        .hero .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 50px;
-            opacity: 0.95;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-        }
-
-        .hero-highlight {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 40px 50px;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            margin-top: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 100px 40px;
-        }
-
-        section:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 60px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 25px;
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: 0.02em;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #1e40af;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            color: #1e40af;
-            font-weight: 600;
-        }
-
-        /* Problem Section */
-        .problem-list {
-            background: white;
-            padding: 50px 60px;
-            border-radius: 8px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-            margin-bottom: 40px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .problem-list ul {
-            list-style: none;
-        }
-
-        .problem-list li {
-            padding: 18px 0;
-            padding-left: 40px;
-            position: relative;
-            font-size: 1.05rem;
-            color: #374151;
-        }
-
-        .problem-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            font-size: 1.8rem;
-            color: #1e40af;
-            font-weight: bold;
-        }
-
-        .solution-box {
-            background: #f0f4ff;
-            padding: 40px 50px;
-            border-radius: 8px;
-            border-left: 4px solid #1e40af;
-            margin-top: 40px;
-        }
-
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 40px 35px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-        }
-
-
-        /* Evidence Section */
-        .evidence-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
-        }
-
-        .evidence-card {
-            background: white;
-            padding: 40px 35px;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-            border-top: 3px solid #1e40af;
-            border-left: 1px solid #e5e7eb;
-            border-right: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .evidence-card h4 {
-            color: #1e40af;
-            margin-bottom: 15px;
-            font-weight: 600;
-            font-size: 1.15rem;
-        }
-
-        /* Curriculum Table */
-        .curriculum-table {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-            margin-top: 50px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .curriculum-row {
-            display: grid;
-            grid-template-columns: 120px 280px 1fr;
-            border-bottom: 1px solid #e5e7eb;
-            transition: background 0.2s ease;
-        }
-
-        .curriculum-row:hover {
-            background: #f8f9fa;
-        }
-
-        .curriculum-row:last-child {
-            border-bottom: none;
-        }
-
-        .curriculum-cell {
-            padding: 28px 30px;
-            border-right: 1px solid #e5e7eb;
-            font-size: 1rem;
-        }
-
-        .curriculum-cell:last-child {
-            border-right: none;
-        }
-
-        .curriculum-header {
-            background: #1e40af;
-            color: white;
-            font-weight: 600;
-        }
-
-        .week-cell {
-            font-weight: 700;
-            color: #1e40af;
-            text-align: center;
-        }
-
-        /* Offer Section */
-        .offer-box {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 70px 60px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 50px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .price {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin: 30px 0;
-            letter-spacing: -0.02em;
-        }
-
-        .price-note {
-            font-size: 1.1rem;
-            opacity: 0.92;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        .includes-list {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 40px 45px;
-            border-radius: 8px;
-            text-align: left;
-            margin: 40px auto;
-            max-width: 650px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .includes-list ul {
-            list-style: none;
-        }
-
-        .includes-list li {
-            padding: 12px 0;
-            padding-left: 35px;
-            position: relative;
-            font-size: 1.05rem;
-        }
-
-        .includes-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 1.4rem;
-        }
-
-        /* CTA Buttons */
-        .cta-buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 18px 45px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            letter-spacing: 0.02em;
-        }
-
-        .cta-primary {
-            background: white;
-            color: #1e40af;
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            background: #f8f9fa;
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .cta-secondary:hover {
-            background: white;
-            color: #1e40af;
-            transform: translateY(-2px);
-        }
-
-        /* Target Audience */
-        .target-list {
-            background: white;
-            padding: 50px 55px;
-            border-radius: 8px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
-            max-width: 750px;
-            margin: 50px auto;
-            border: 1px solid #e5e7eb;
-        }
-
-        .target-list ul {
-            list-style: none;
-        }
-
-        .target-list li {
-            padding: 18px 0;
-            padding-left: 40px;
-            position: relative;
-            font-size: 1.05rem;
-            border-bottom: 1px solid #e5e7eb;
-            color: #374151;
-        }
-
-        .target-list li:last-child {
-            border-bottom: none;
-        }
-
-        .target-list li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            font-size: 1.8rem;
-            color: #1e40af;
-            font-weight: bold;
-        }
-
-        /* Final Message */
-        .final-message {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            color: white;
-            padding: 100px 40px;
-            text-align: center;
-        }
-
-        .final-message h2 {
-            color: white;
-        }
-
-        .final-message h2::after {
-            background: white;
-        }
-
-        .final-message p {
-            font-size: 1.2rem;
-            margin: 25px 0;
-            line-height: 1.9;
-            font-weight: 400;
-        }
-
-        /* Limited Offer Badge */
-        .limited-badge {
-            display: inline-block;
-            background: #dc2626;
-            color: white;
-            padding: 12px 35px;
-            border-radius: 6px;
-            font-weight: 600;
-            margin: 25px 0;
-            font-size: 1.05rem;
-            letter-spacing: 0.02em;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.1rem;
-            }
-
-            .curriculum-row {
-                grid-template-columns: 1fr;
-            }
-
-            .curriculum-cell {
-                border-right: none;
-                border-bottom: 1px solid #e5e7eb;
-            }
-
-            .offer-box {
-                padding: 40px 20px;
-            }
-
-            .price {
-                font-size: 2.5rem;
-            }
-
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1rem;
-                width: 100%;
-            }
-        }
-
-        /* Affinity Section */
-        .affinity-box {
-            background: white;
-            padding: 55px 60px;
-            border-radius: 8px;
-            box-shadow: 0 2px 25px rgba(0, 0, 0, 0.08);
-            max-width: 850px;
-            margin: 50px auto;
-            border-left: 4px solid #1e40af;
-            border-top: 1px solid #e5e7eb;
-            border-right: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .affinity-box p {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            margin-bottom: 22px;
-            color: #374151;
-        }
-
-        .affinity-highlight {
-            background: #f0f4ff;
-            padding: 30px 40px;
-            border-radius: 8px;
-            margin-top: 35px;
-            font-size: 1.15rem;
-            font-weight: 600;
-            text-align: center;
-            color: #1e40af;
-            border: 1px solid #dbeafe;
-        }
-    </style>
+    <meta name="description" content="プログラミング未経験でも、1ヶ月でLPを自由自在に作れるようになる Claude Code マンツーマン講座">
+    <title>Claude Code マンツーマン講座 | AIと作るLP制作実践講座</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Hero Section -->
@@ -479,8 +21,8 @@
             <h1>Claude Code マンツーマン講座</h1>
             <p class="subtitle">プログラミング未経験でも、1ヶ月でLPを自由自在に作れるようになる</p>
             <div class="hero-highlight">
-                <p style="font-size: 1.2rem; font-weight: 600;">AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
-                <p style="font-size: 1.05rem; margin-top: 20px;">しかし、AIの指示の出し方を知らないと挫折してしまうのが現実です。</p>
+                <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
+                <p style="font-size: 1.05rem;">しかし、AIの指示の出し方を知らないと挫折してしまうのが現実です。</p>
             </div>
         </div>
     </section>
@@ -488,17 +30,17 @@
     <!-- Problem Section -->
     <section id="problem">
         <div class="container">
-            <h2>こんな課題を抱えていませんか？</h2>
+            <h2 class="section-title">こんな課題を抱えていませんか？</h2>
             <div class="problem-list">
                 <ul>
-                    <li>LPを作りたい。でも、コードが分からない。</li>
-                    <li>ノーコードでは限界を感じている。</li>
-                    <li>AIを使えばできると聞いたけど、どうすればいいのか分からない。</li>
+                    <li>LPを作りたいが、コードが分からない</li>
+                    <li>ノーコードツールでは限界を感じている</li>
+                    <li>AIを使えばできると聞いたが、具体的な方法が分からない</li>
                 </ul>
             </div>
             <div class="solution-box">
-                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">実は今、AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
-                <p style="font-size: 1.1rem;">それでも多くの人が挫折してしまうのは、<br><strong>AIの指示の出し方（プロンプト）を知らないからです。</strong></p>
+                <p style="font-size: 1.15rem; font-weight: 600; margin-bottom: 1rem;">実は今、AIを使えば「コードを書けなくても」Webサイトを自分で作れる時代。</p>
+                <p>それでも多くの人が挫折してしまうのは、<strong>AIの指示の出し方（プロンプト）を知らないからです。</strong></p>
             </div>
         </div>
     </section>
@@ -506,15 +48,12 @@
     <!-- Affinity Section -->
     <section id="affinity">
         <div class="container">
-            <h2>私も同じ悩みを抱えていました</h2>
+            <h2 class="section-title">私も同じ悩みを抱えていました</h2>
             <div class="affinity-box">
                 <p>私もかつて、LPを作るたびに「ここだけ変えたいのにコードがわからない…」と悩んでいました。</p>
-                <p>でも、<strong>Claude Codeを使い始めてからは、</strong><br>
-                AIに「このセクションのデザインをもう少し柔らかくして」と伝えるだけで、<br>
-                LPがまるで一緒に作る相棒のように形になっていくようになりました。</p>
+                <p>でも、<strong>Claude Codeを使い始めてからは、</strong>AIに「このセクションのデザインをもう少し柔らかくして」と伝えるだけで、LPがまるで一緒に作る相棒のように形になっていくようになりました。</p>
                 <div class="affinity-highlight">
-                    あなたも同じように、"AIと組む"だけで、<br>
-                    デザインもコピーも構成も思い通りのLPが作れるようになります。
+                    あなたも同じように、"AIと組む"だけで、デザインもコピーも構成も思い通りのLPが作れるようになります。
                 </div>
             </div>
         </div>
@@ -523,28 +62,28 @@
     <!-- Solution Section -->
     <section id="solution">
         <div class="container">
-            <h2>解決策：AIと作る実践型講座</h2>
+            <h2 class="section-title">解決策：AIと作る実践型講座</h2>
             <div style="max-width: 900px; margin: 0 auto;">
-                <h3 style="text-align: center; color: #1e40af; font-size: 1.3rem; margin-bottom: 40px; font-weight: 600; line-height: 1.8;">
+                <p class="text-center mb-xl" style="font-size: 1.25rem; color: var(--color-primary-dark); font-weight: 600;">
                     Claude Codeを使ったマンツーマン×実践型講座で、<br>
                     未経験からでも自分でLPを作り上げる力を1ヶ月で習得できます。
-                </h3>
-                <div class="benefits-grid">
+                </p>
+                <div class="card-grid">
                     <div class="benefit-card">
-                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">LP構成をAIと一緒に設計</h4>
-                        <p style="color: #6b7280;">ワイヤーフレームから始めて、構成を最適化します</p>
+                        <h4>LP構成をAIと一緒に設計</h4>
+                        <p>ワイヤーフレームから始めて、構成を最適化します</p>
                     </div>
                     <div class="benefit-card">
-                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">HTML/CSSを自動生成</h4>
-                        <p style="color: #6b7280;">Claude Codeが自動でコードを作成します</p>
+                        <h4>HTML/CSSを自動生成</h4>
+                        <p>Claude Codeが自動でコードを作成します</p>
                     </div>
                     <div class="benefit-card">
-                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">会話ベースで修正・改善</h4>
-                        <p style="color: #6b7280;">コードを書かずに自然な会話で調整可能</p>
+                        <h4>会話ベースで修正・改善</h4>
+                        <p>コードを書かずに自然な会話で調整可能</p>
                     </div>
                     <div class="benefit-card">
-                        <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">画像・コピーもAIで作成</h4>
-                        <p style="color: #6b7280;">1枚のLPを完全に完成させます</p>
+                        <h4>画像・コピーもAIで作成</h4>
+                        <p>1枚のLPを完全に完成させます</p>
                     </div>
                 </div>
             </div>
@@ -554,26 +93,26 @@
     <!-- Benefits Section -->
     <section id="benefits">
         <div class="container">
-            <h2>1ヶ月後に得られる成果</h2>
-            <div class="benefits-grid">
+            <h2 class="section-title">1ヶ月後に得られる成果</h2>
+            <div class="card-grid">
                 <div class="benefit-card">
-                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">LPを自由自在に作れる</h4>
-                    <p style="color: #6b7280;">AIに指示して思い通りのページを制作できます</p>
+                    <h4>LPを自由自在に作れる</h4>
+                    <p>AIに指示して思い通りのページを制作できます</p>
                 </div>
                 <div class="benefit-card">
-                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">自分で修正できる</h4>
-                    <p style="color: #6b7280;">コードが分からなくても調整が可能になります</p>
+                    <h4>自分で修正できる</h4>
+                    <p>コードが分からなくても調整が可能になります</p>
                 </div>
                 <div class="benefit-card">
-                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">すぐに実務で使える</h4>
-                    <p style="color: #6b7280;">クライアントLP・自社LPをすぐに制作できます</p>
+                    <h4>すぐに実務で使える</h4>
+                    <p>クライアントLP・自社LPをすぐに制作できます</p>
                 </div>
                 <div class="benefit-card">
-                    <h4 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 15px; color: #1e40af;">市場価値が向上する</h4>
-                    <p style="color: #6b7280;">AIでWebを作れる人材として差別化できます</p>
+                    <h4>市場価値が向上する</h4>
+                    <p>AIでWebを作れる人材として差別化できます</p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 50px; font-size: 1.15rem; font-weight: 600; color: #1e40af;">
+            <div class="text-center mt-xl" style="font-size: 1.15rem; font-weight: 600; color: var(--color-primary);">
                 外注に頼らず、自分の手で成果につながるページを制作できるようになります。
             </div>
         </div>
@@ -582,10 +121,10 @@
     <!-- Evidence Section -->
     <section id="evidence">
         <div class="container">
-            <h2>実績と信頼性</h2>
-            <div style="text-align: center; margin-bottom: 50px;">
-                <h3 style="color: #1e40af; font-size: 1.3rem;">現役でAI×Web制作支援を行うクリエイティブディレクターが指導</h3>
-                <p style="font-size: 1.05rem; margin-top: 15px; color: #374151;">企業サイト・LP構築・地域プロジェクトなど実務でClaude Codeを活用中</p>
+            <h2 class="section-title">実績と信頼性</h2>
+            <div class="text-center mb-xl">
+                <h3 class="text-primary" style="font-size: 1.5rem; margin-bottom: 1rem;">現役でAI×Web制作支援を行うクリエイティブディレクターが指導</h3>
+                <p class="text-gray">企業サイト・LP構築・地域プロジェクトなど実務でClaude Codeを活用中</p>
             </div>
             <div class="evidence-cards">
                 <div class="evidence-card">
@@ -607,7 +146,7 @@
     <!-- Contents Section -->
     <section id="contents">
         <div class="container">
-            <h2>講座カリキュラム</h2>
+            <h2 class="section-title">講座カリキュラム</h2>
             <div class="curriculum-table">
                 <div class="curriculum-row curriculum-header">
                     <div class="curriculum-cell">週</div>
@@ -635,14 +174,16 @@
                     <div class="curriculum-cell">フルページをAIと共同制作・公開まで伴走</div>
                 </div>
             </div>
-            <div style="background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin-top: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                <h3 style="text-align: center; color: #667eea; margin-bottom: 20px;">＋ 充実のサポート</h3>
+            <div class="card mt-xl" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h3 class="text-center text-primary mb-md">充実のサポート</h3>
                 <ul style="list-style: none;">
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span> Slack or LINEサポート30日間
+                    <li style="padding: 0.75rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--color-success); font-weight: bold; font-size: 1.25rem;">✓</span>
+                        Slack / LINEサポート30日間
                     </li>
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative;">
-                        <span style="position: absolute; left: 0;">✓</span> Claude Codeプロンプトテンプレート集付き
+                    <li style="padding: 0.75rem 0; padding-left: 2rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--color-success); font-weight: bold; font-size: 1.25rem;">✓</span>
+                        Claude Codeプロンプトテンプレート集付き
                     </li>
                 </ul>
             </div>
@@ -652,20 +193,20 @@
     <!-- Offer Section -->
     <section id="offer">
         <div class="container">
-            <h2>受講料とお申し込み</h2>
+            <h2 class="section-title">受講料とお申し込み</h2>
             <div class="offer-box">
                 <div class="limited-badge">毎月5名限定</div>
-                <div class="price">98,000円<span style="font-size: 1.5rem;">（税込）</span></div>
+                <div class="price">98,000<span style="font-size: 1.5rem;">円（税込）</span></div>
                 <p class="price-note">分割払い可：49,000円×2回</p>
 
                 <div class="includes-list">
-                    <h3 style="margin-bottom: 20px; color: white;">含まれるもの：</h3>
+                    <h3 style="margin-bottom: 1.5rem; color: white;">含まれるもの：</h3>
                     <ul>
                         <li>全4回マンツーマンレッスン（各90分）</li>
-                        <li>Slack/LINEサポート（30日間）</li>
+                        <li>Slack / LINEサポート（30日間）</li>
                         <li>Claude Code設定サポート</li>
                         <li>LP完成まで伴走支援</li>
-                        <li>修了証＆ポートフォリオ支援</li>
+                        <li>修了証 & ポートフォリオ支援</li>
                     </ul>
                 </div>
 
@@ -680,13 +221,13 @@
     <!-- Target Audience Section -->
     <section id="target">
         <div class="container">
-            <h2>受講対象者</h2>
+            <h2 class="section-title">受講対象者</h2>
             <div class="target-list">
                 <ul>
-                    <li>LPを外注せず、自分で作れるようになりたい</li>
-                    <li>ChatGPTやAIツールを仕事に活かしたい</li>
-                    <li>Web制作・デザインに興味があるけど、未経験</li>
-                    <li>自社商品を売るために"自分でLPを更新できる力"がほしい</li>
+                    <li>LPを外注せず、自分で作れるようになりたい方</li>
+                    <li>ChatGPTやAIツールを仕事に活かしたい方</li>
+                    <li>Web制作・デザインに興味があるが、未経験の方</li>
+                    <li>自社商品を売るために自分でLPを更新できる力がほしい方</li>
                 </ul>
             </div>
         </div>
@@ -695,26 +236,33 @@
     <!-- Final Message Section -->
     <section class="final-message">
         <div class="container">
-            <h2>最後に</h2>
-            <p style="max-width: 850px; margin: 30px auto;">
-                Claude Codeは、あなたの代わりにコードを書き、<br>
-                あなたの意図を汲み取って形にしてくれる「もう一人の開発者」です。
+            <h2 class="section-title">最後に</h2>
+            <p style="max-width: 850px; margin: 2rem auto;">
+                Claude Codeは、あなたの代わりにコードを書き、あなたの意図を汲み取って形にしてくれる「もう一人の開発者」です。
             </p>
-            <div style="background: rgba(255, 255, 255, 0.15); padding: 50px; border-radius: 8px; backdrop-filter: blur(10px); margin: 50px auto; max-width: 750px; border: 1px solid rgba(255, 255, 255, 0.2);">
-                <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 25px;">1ヶ月後、あなたは「プログラミング未経験者」ではなく、</p>
-                <p style="font-size: 1.35rem; font-weight: 700;">AIとLPを作れる人材になっています。</p>
+            <div class="final-message-box">
+                <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem; color: white;">
+                    1ヶ月後、あなたは「プログラミング未経験者」ではなく、
+                </p>
+                <p style="font-size: 1.5rem; font-weight: 700; color: white;">
+                    AIとLPを作れる人材になっています。
+                </p>
             </div>
-            <div class="cta-buttons" style="margin-top: 50px;">
+            <div class="cta-buttons">
                 <a href="#" class="cta-button cta-primary">今すぐ無料カウンセリングを予約する</a>
             </div>
         </div>
     </section>
 
-    <footer style="background: #1f2937; color: white; padding: 50px 40px; text-align: center;">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <p style="font-size: 0.95rem;">&copy; 2025 Claude Code マンツーマン講座. All rights reserved.</p>
-            <p style="margin-top: 15px; opacity: 0.75; font-size: 0.9rem;">AIと一緒に、あなたの理想を実現する</p>
+            <p>&copy; 2025 Claude Code マンツーマン講座. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.75; font-size: 0.875rem;">AIと一緒に、あなたの理想を実現する</p>
         </div>
     </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
