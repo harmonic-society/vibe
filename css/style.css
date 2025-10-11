@@ -178,7 +178,7 @@ section {
     padding: var(--spacing-3xl) 0;
 }
 
-section:nth-child(even) {
+section:nth-child(even):not(.hero):not(.final-message):not(.offer-box) {
     background: linear-gradient(180deg, var(--color-gray-50) 0%, white 100%);
 }
 
