@@ -43,12 +43,16 @@
     }, observerOptions);
 
     // Observe elements that should animate on scroll
-    document.querySelectorAll('.card, .benefit-card, .evidence-card, .problem-list, .solution-box, .affinity-box, .target-list, .curriculum-table').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-    });
+    const animatedElements = document.querySelectorAll('.card, .benefit-card, .evidence-card, .problem-list, .solution-box, .affinity-box, .target-list, .curriculum-table');
+
+    if (animatedElements.length > 0) {
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    }
 
     // Add animate-in styles
     const style = document.createElement('style');
@@ -61,16 +65,16 @@
     document.head.appendChild(style);
 
     // ========================================
-    // Parallax Effect for Hero Section
+    // Parallax Effect for Hero Section  (Disabled for stability)
     // ========================================
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.5;
-            hero.style.transform = `translate3d(0, ${rate}px, 0)`;
-        });
-    }
+    // const hero = document.querySelector('.hero');
+    // if (hero) {
+    //     window.addEventListener('scroll', () => {
+    //         const scrolled = window.pageYOffset;
+    //         const rate = scrolled * 0.3;
+    //         hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+    //     });
+    // }
 
     // ========================================
     // Dynamic Number Counter Animation
@@ -90,62 +94,15 @@
     }
 
     // ========================================
-    // Cursor Follow Effect (Optional)
+    // Cursor Follow Effect (Disabled for compatibility)
     // ========================================
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        border: 2px solid #2563eb;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
-        display: none;
-    `;
-    document.body.appendChild(cursor);
-
-    // Only enable custom cursor on desktop
-    if (window.innerWidth > 1024) {
-        cursor.style.display = 'block';
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX - 10 + 'px';
-            cursor.style.top = e.clientY - 10 + 'px';
-            cursor.style.opacity = '1';
-        });
-
-        document.addEventListener('mouseleave', () => {
-            cursor.style.opacity = '0';
-        });
-
-        // Scale up cursor on interactive elements
-        document.querySelectorAll('a, button, .cta-button, .benefit-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(2)';
-                cursor.style.borderColor = '#8b5cf6';
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.borderColor = '#2563eb';
-            });
-        });
-    }
+    // Custom cursor disabled for better compatibility
 
     // ========================================
     // Loading Animation
     // ========================================
     window.addEventListener('load', () => {
         document.body.classList.add('loaded');
-
-        // Add fade-in effect to body
-        document.body.style.opacity = '0';
-        document.body.style.transition = 'opacity 0.5s ease-in';
-        setTimeout(() => {
-            document.body.style.opacity = '1';
-        }, 100);
     });
 
     // ========================================
@@ -261,29 +218,9 @@
     });
 
     // ========================================
-    // Card Tilt Effect on Mouse Move
+    // Card Tilt Effect (Disabled for compatibility)
     // ========================================
-    if (window.innerWidth > 1024) {
-        document.querySelectorAll('.benefit-card, .evidence-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-
-                const rotateX = (y - centerY) / 20;
-                const rotateY = (centerX - x) / 20;
-
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
-            });
-
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
-        });
-    }
+    // Card tilt effect disabled for better compatibility
 
     // ========================================
     // Console Easter Egg

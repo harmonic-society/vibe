@@ -102,10 +102,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-h4 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h4 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
 p {
     line-height: 1.8;
@@ -117,12 +117,12 @@ p {
 ======================================== */
 .hero {
     position: relative;
-    min-height: 85vh;
+    min-height: 600px;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
     overflow: hidden;
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
 .hero::before {
@@ -451,13 +451,17 @@ h2.section-title::after {
     font-size: 1rem;
     margin-bottom: var(--spacing-lg);
     box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 1;
 }
 
 .price {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 800;
     margin: var(--spacing-lg) 0;
     letter-spacing: -0.03em;
+    position: relative;
+    z-index: 1;
 }
 
 .price-note {
@@ -475,6 +479,8 @@ h2.section-title::after {
     margin: var(--spacing-xl) auto;
     max-width: 650px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
 }
 
 .includes-list ul {
@@ -504,6 +510,8 @@ h2.section-title::after {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: var(--spacing-xl);
+    position: relative;
+    z-index: 1;
 }
 
 .cta-button {
