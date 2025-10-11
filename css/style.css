@@ -636,6 +636,8 @@ h2.section-title::after {
 
 .final-message h2 {
     color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .final-message h2::after {
@@ -646,6 +648,8 @@ h2.section-title::after {
     font-size: 1.25rem;
     margin: var(--spacing-lg) 0;
     color: rgba(255, 255, 255, 0.95);
+    position: relative;
+    z-index: 1;
 }
 
 .final-message-box {
@@ -656,6 +660,13 @@ h2.section-title::after {
     margin: var(--spacing-2xl) auto;
     max-width: 800px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.final-message .container {
+    position: relative;
+    z-index: 1;
 }
 
 /* ========================================
