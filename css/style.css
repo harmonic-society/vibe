@@ -7,12 +7,12 @@
    CSS Variables (Design System)
 ======================================== */
 :root {
-    /* Colors */
-    --color-primary: #2563eb;
-    --color-primary-dark: #1e40af;
-    --color-primary-light: #3b82f6;
-    --color-secondary: #8b5cf6;
-    --color-accent: #ec4899;
+    /* Colors - Warm gradient theme */
+    --color-primary: #6366f1;
+    --color-primary-dark: #4f46e5;
+    --color-primary-light: #818cf8;
+    --color-secondary: #a855f7;
+    --color-accent: #f472b6;
     --color-success: #10b981;
     --color-warning: #f59e0b;
     --color-danger: #ef4444;
@@ -120,7 +120,7 @@ p {
     min-height: 600px;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
     overflow: hidden;
     padding: var(--spacing-3xl) var(--spacing-lg);
 }
@@ -197,7 +197,7 @@ h2.section-title::after {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
     border-radius: var(--radius-full);
 }
 
@@ -304,7 +304,7 @@ h2.section-title::after {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
     transform: scaleX(0);
     transition: transform var(--transition-base);
 }
@@ -404,7 +404,7 @@ h2.section-title::after {
 }
 
 .curriculum-header {
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary) 100%);
     color: white;
     font-weight: 600;
 }
@@ -419,7 +419,7 @@ h2.section-title::after {
    Offer Section
 ======================================== */
 .offer-box {
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary) 100%);
     color: white;
     padding: var(--spacing-3xl) var(--spacing-2xl);
     border-radius: var(--radius-2xl);
@@ -616,7 +616,7 @@ h2.section-title::after {
    Final Message
 ======================================== */
 .final-message {
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary) 50%, var(--color-accent) 100%);
     color: white;
     padding: var(--spacing-3xl) 0;
     text-align: center;
